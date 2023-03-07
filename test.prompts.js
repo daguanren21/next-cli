@@ -1,20 +1,19 @@
-import prompts from "prompts";
+const prompts = require('prompts');
 
-(async() => {
-    const response = await prompts({
-        type: "select",
-        name: "value",
-        message: "Pick a color",
-        choices: [{
-                title: "Red",
-                description: "This option has a description",
-                value: "#ff0000",
-            },
-            { title: "Green", value: "#00ff00", disabled: true },
-            { title: "Blue", value: "#0000ff" },
-        ],
-        initial: 1,
-    });
+const questions = [
+  {
+    type: 'text',
+    name: 'dish',
+    message: 'Do you like pizza?'
+  },
+  {
+    type: prev => prev == 'pizza' ? 'text' : null,
+    name: 'topping',
+    message: 'Name a topping'
+  }
+];
 
-    console.log(response);
+(async () => {
+  const response = await prompts(questions);
+  console.log(response)
 })();
