@@ -1,6 +1,6 @@
 {
     "name": "next-cli",
-    "packageManager": "pnpm@7.16.1",
+    "packageManager": "pnpm@7.27.1",
     "version": "1.0.0",
     "description": "try develop cli to service company",
     "main": "index.js",
@@ -14,9 +14,14 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@vue/cli-shared-utils": "^5.0.8",
         "cac": "^6.7.14",
         "consola": "^2.15.3",
         "picocolors": "^1.0.0",
         "prompts": "^2.4.2"
+    },
+    "devDependencies": {
+        "fs-extra": "^11.1.0",
+        "jquery":"3.6.3"
     }
 }
